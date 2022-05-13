@@ -23,6 +23,7 @@ function getCreateIntro(){
     introBody.classList.add("intro__body")
     introBodyContent.classList.add("intro__body-content")
     buttonLogin.classList.add("inro__registers")
+    buttonSingIn.classList.add("intro__login")
 
     buttonLogin.setAttribute("type", "button")
     buttonSingIn.setAttribute("type", "button")
