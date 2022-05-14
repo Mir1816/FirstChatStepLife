@@ -1,5 +1,6 @@
 import createStep3 from "./appRegister.js"
 
+const registerUser ={}
 
 function registers(){
     const body = document.querySelector("body")
@@ -28,6 +29,7 @@ function registers(){
     paswordlInput.setAttribute("type", "password")
     paswordlInput.setAttribute("placeholder", "Password")
    
+
     registerStep1.classList.add("registers__step1")
     modalRegister.classList.add("modal__register-inner")
     buttonNext.classList.add("registers__step1")
@@ -52,6 +54,12 @@ function registers(){
     register.addEventListener("click",()=>{
         intro.remove()
         createStep0()
+    })
+    buttonNext.addEventListener("click", ()=>{
+        registerUser.login = nameInput.value
+        registerUser.email = emailInput.value
+        registerUser.password = paswordlInput.value
+        console.log(registerUser)
     })
 
     // Step 1

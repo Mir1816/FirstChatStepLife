@@ -1,6 +1,7 @@
 @import url(./project/js/intro/intro.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url(./project/js/intro/modal/login/login.css);
+@import url(./project/js/flsChat/flsChat.css);
 
 body{
     color: rgb(49, 43, 82);

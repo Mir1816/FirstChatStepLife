@@ -155,6 +155,8 @@ stepSend.textContent = "Send"
 step3Botton.insertAdjacentElement("beforeend", stepBack)
 step3Botton.insertAdjacentElement("beforeend", stepSend)
 
+stepSend.setAttribute("type", "button")
+
 //Info
 const divInfo = document.createElement("div")
 const divZodiac = document.createElement("div")
@@ -221,7 +223,6 @@ function createStep3(){
             li.classList.add("activeitem_sex")
             user.gender = item.text
 
-            console.log(user)
             
         })
     })
@@ -251,9 +252,6 @@ function createStep3(){
             }
             li.classList.add("activeitem_zodiac")
             user.zodiac = item.text
-
-            console.log(user)
-            
         })
     })
 
@@ -272,15 +270,16 @@ function createStep3(){
         li.addEventListener("click", ()=>{
             li.classList.add("activeitem_hobby")
             hobbyArr.push(item.text)
-            console.log(item.text)
-            console.log(hobbyArr)
         })
         user.hobby = hobbyArr
 
     })
     
-    console.log(step3Container)
-    console.log(user)
+    stepSend.addEventListener("click", ()=>{
+        user.userName = inputName.value
+        user.userAge = inputAge.value
+        console.log(user)
+    })
 }
 
 export default createStep3
